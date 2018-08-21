@@ -8,6 +8,7 @@
 
 
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/jquery.custom-scrollbar.css">
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 
 </head>
@@ -60,6 +61,62 @@
 						</div>
 					</div>
 
+					<div class="chat-body-wrapper row">
+						<div class="col-md-9 chat-inner">
+							<div class="chat-messages">
+								<div class="message in">
+									Actually, dvd printing is a labeling technique that helps to identify DVDs. Thus, dvd printing is essential part of your commercial DVD production. Labeling technique that helps to identify DVDs
+								</div>
+								<div class="message out">
+									Offset dvd printing is well suited for the high volumes of DVDs.
+								</div>
+								<div class="message in">
+									Actually, dvd printing is a labeling technique that helps to identify DVDs. Thus, dvd printing is essential part of your commercial DVD production. Labeling technique that helps to identify DVDs
+								</div>
+								<div class="message in">
+									Offset dvd printing is well suited for the high volumes of DVDs.
+								</div>
+								<div class="message out">
+									Actually, dvd printing is a labeling technique that helps to identify DVDs. Thus, dvd printing is essential part of your commercial DVD production. Labeling technique that helps to identify DVDs
+								</div>
+								<div class="message in">
+									Actually, dvd printing is a labeling technique that helps to identify DVDs. Thus, dvd printing is essential part of your commercial DVD production. Labeling technique that helps to identify DVDs
+								</div>
+								<div class="message out">
+									Offset dvd printing is well suited for the high volumes of DVDs.
+								</div>
+								<div class="message in">
+									Actually, dvd printing is a labeling technique that helps to identify DVDs. Thus, dvd printing is essential part of your commercial DVD production. Labeling technique that helps to identify DVDs
+								</div>
+								<div class="message in">
+									Offset dvd printing is well suited for the high volumes of DVDs.
+								</div>
+								<div class="message out">
+									Actually, dvd printing is a labeling technique that helps to identify DVDs. Thus, dvd printing is essential part of your commercial DVD production. Labeling technique that helps to identify DVDs
+								</div>
+							</div>
+
+							<div class="new-message">
+								<form>
+									<div class="col-sm-7">
+										<input type="text" name="message" placeholder="Type your message...">
+										<p>type <strong>@pub</strong> to post a message to all SR members</p>
+									</div>
+									<div class="col-sm-5">
+										<a href=""><i class="icon icon-attach"></i></a>
+										<button type="submit">Send</button>
+									</div>
+								</form>
+							</div>
+						</div>
+						<div class="col-md-3 chat-files">
+							<a href="" class="hide-files"><i class="icon icon-collapse"></i></a>
+							<div class="files-inner">
+								<h3>Shared Files</h3>
+							</div>
+						</div>
+					</div>
+
 				</div>
 			</div>
 		</div>
@@ -69,6 +126,21 @@
 
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script src="js/jquery.custom-scrollbar.min.js"></script>
+	<script>
+		$(document).ready(function() {
+			$(".chat-messages").customScrollbar({
+				  skin: "default-skin", 
+				  hScroll: false,
+				  vScroll: true,
+				  updateOnWindowResize: true
+			}).customScrollbar("scrollToY", "99999");
+			$("a.hide-files").on("click", function() {
+				$(".chat-body-wrapper").toggleClass("chat-body-closed");
+				return false;
+			});
+		});
+	</script>
 
 </body>
 </html>

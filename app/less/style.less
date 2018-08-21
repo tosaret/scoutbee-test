@@ -18,6 +18,13 @@ a {
 	transition: all 200ms ease-in;
 }
 
+.scrollable .scroll-bar.vertical {
+	right: 10px;
+}
+.scrollable.default-skin .scroll-bar .thumb {
+	background: #dbdde6;
+}
+
 .icon {
 	display: inline-block;
 	width: 34px;
@@ -47,6 +54,12 @@ a {
 	&.icon-close {
 		background: url(../img/icn-add.svg) center no-repeat;
 	}
+	&.icon-collapse {
+		background: url(../img/icn-collapse.svg) center no-repeat;
+	}
+	&.icon-attach {
+		background: url(../img/icn-attach-files.svg) center no-repeat;
+	}
 
 }
 
@@ -56,12 +69,12 @@ a {
 	background: #fff;
 	height: calc(100vh - 60px);
 	border-radius: 6px;
+	overflow: hidden;
 }
 
 .chat-list {
 	height: calc(100vh - 60px);
 	background: #f9f9f9;
-	box-shadow: 0 0 23px 0 rgba(0, 0, 0, 0.19);
 	border-radius: 6px 0 0 6px;
 }
 
@@ -147,10 +160,8 @@ a {
 
 
 
-
 .chat-body-header {
 	background-color: #e6f0ff;
-    box-shadow: 0 0 23px 0 rgba(0, 0, 0, 0.23);
     border-radius: 0 6px 0 0;
     line-height: 60px;
 
@@ -202,10 +213,114 @@ a {
 	}
 }
 
+.chat-inner {
+	padding: 0;
+}
+.chat-messages {
 
+	padding: 15px 35px 15px 25px !important;
+	height: 100vh;
+	max-height: calc(100vh - 195px);
+	box-shadow: inset 0 0 20px 0 rgba(0, 0, 0, 0.19);
 
+	.message {
+		border-radius: 6px;
+  		background: rgba(219, 221, 230, 0.5);
+  		margin: 0 0 40px;
+  		padding: 15px;
+  		width: 80%;
+  		float: right;
 
+  		&.in {
+  			background: #f9f9f9;
+  			float: left;
+  		}
+	}
+}
+.new-message {
+	padding: 15px 0;
+	
+	form {
 
+	}
+	input {
+		width: 100%;
+		padding: 0 5px;
+		height: 30px;
+		line-height: 30px;
+	}
+	p {
+		margin: 4px 0 0;
+		font-size: 12px;
+		letter-spacing: 0.6px;
+  		color: #929098;
+	}
+	a {
+		float: left;
+
+		i {
+			margin-top: -2px;
+		}
+	}
+	button {
+		width: 63px;
+		height: 30px;
+		border-radius: 1px;
+		background-color: #ffffff;
+		border: solid 1px #fe8403;
+		letter-spacing: 0.2px;
+  		color: #e37500;
+  		font-weight: 600;
+	}
+}
+
+.chat-files {
+	padding: 0;
+
+	h3 {
+		margin: 0;
+	}
+
+	a.hide-files {
+		display: block;
+		background: #f9f9f9;
+  		box-shadow: 0 0 23px 0 rgba(63, 63, 66, 0.2);
+  		width: 42px;
+  		height: 42px;
+  		border-radius: 3px 0 0 3px;
+  		position: absolute;
+  		z-index: 1;
+  		left: -42px;
+  		top: 22px;
+  		text-align: center;
+
+  		.icon {
+  			margin-top: 4px;
+  		}
+
+	}
+}
+.files-inner {
+	background: #f9f9f9;
+	height: calc(100vh - 120px);
+	position: relative;
+	z-index: 2;
+	padding: 30px 15px;
+}
+
+.chat-body-closed {
+	.chat-inner {
+		width: 100%;
+	}
+	.chat-files {
+		width: 0;
+	}
+	a.hide-files {
+		.icon {
+			transform: rotate(180deg);
+		}
+	}
+}
 
 
 
