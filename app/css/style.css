@@ -152,10 +152,10 @@ a {
   border: none;
   height: 30px;
 }
-.chats .chats-scroll {
+.chats {
   height: calc(100vh - 230px);
 }
-.chats .chats-scroll .scroll-bar.vertical {
+.chats .scroll-bar.vertical {
   right: -5px;
 }
 .chats button {
